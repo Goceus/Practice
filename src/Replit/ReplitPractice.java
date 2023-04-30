@@ -1,11 +1,10 @@
 package Replit;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.Scanner;
-import java.util.*;
+import Replit.oop_item.Item;
 
-    public class ReplitPractice {
+import java.util.Scanner;
+
+public class ReplitPractice{
 
 
         public static void main(String[] args) {
@@ -1139,7 +1138,7 @@ import java.util.*;
         }*/
 
 
-            //
+
 
 
         }

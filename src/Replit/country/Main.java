@@ -26,19 +26,6 @@ public class Main {
 
     }
 
-//    public Main(String name, String continent){
-//        super(name, continent);
-//    }
-//
-//    public Main(String name, String continent, long population){
-//        this(name, continent);
-//        super.population = population;
-//    }
-//
-//    public Main(String name, String continent, long population, boolean nearWater){
-//        this(name, continent, population);
-//        super.nearWater = nearWater;
-//    }
     public static void test(Country c) {
         System.out.println(c.name);
         System.out.println(c.continent);

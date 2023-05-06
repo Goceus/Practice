@@ -33,9 +33,7 @@ public class Shelf {
 
     public static List<Book> getTheBooks() {
         // TODO
-
-
-        return null;
+        return theBooks;
     }
 
     /**
@@ -47,9 +45,7 @@ public class Shelf {
 
     public static boolean isShelfEmpty(){
         // TODO
-
-
-        return false;
+        return theBooks.isEmpty();
     }
 
     /**
@@ -62,9 +58,12 @@ public class Shelf {
 
     public static boolean isIDUnique(int id){
         // TODO
-
-
-        return false;
+        for( Book each : theBooks){
+            if (each.getId() == id) {
+                return false;
+            }
+        }
+        return true;
     }
 
     /**
@@ -88,9 +87,9 @@ public class Shelf {
 
     public static boolean addBook(int id, String author, String title, int pages ){
         // TODO
-
-
-
+        if(isIDUnique(id) && !title.isEmpty() && pages > 0 ){
+            return theBooks.add(new Book(id,author,title,pages));
+        }
         return false;
     }
 
@@ -117,8 +116,14 @@ public class Shelf {
 
     public static boolean addBook(Book book){
         // TODO
+        boolean result = false;
 
-
+        if(!isIDUnique(book.getId()) && book.getTitle().isEmpty() &&  book.getPages() <= 0 ){
+            return false;
+        }else if(isIDUnique(book.getId()) && Book.isTitleWord(book.getTitle()) && book.getPages() > 0){
+            theBooks.add(book);
+            return true;
+        }
         return false;
     }
 
@@ -136,9 +141,12 @@ public class Shelf {
 
     public static String getTitleByID(int id) {
         // TODO
-
-
-        return null;
+        for( Book each : theBooks ){
+            if(each.getId() == id){
+                return each.getTitle();
+            }
+        }
+        return "book not found";
     }
 
     /**
@@ -157,8 +165,14 @@ public class Shelf {
 
     public static Book findBookByPartialTitle(String title) {
         // TODO
+        for (Book eachBook : theBooks) {
 
+            title = title.toLowerCase();
+            if (eachBook.getTitle().toLowerCase().contains(title)) {
+                return eachBook;
+            }
 
+        }
         return null;
     }
 
@@ -173,9 +187,13 @@ public class Shelf {
 
     public static List<Book> getAllBooksForAuthor(String author) {
         // TODO
+        List<Book> newList = new ArrayList<>();
 
-
-        return null;
+        for( Book each : theBooks )
+            if (each.getAuthor().equalsIgnoreCase(author)) {
+                newList.add(each);
+            }
+        return newList;
     }
 
     /**
@@ -184,9 +202,14 @@ public class Shelf {
      * Look for the book in the theBooks list that matches the id and remove it
      * if there is not match, no action needed
      */
-    public static void removeBook(int id) {
+    public static void removeBook(int id){
         // TODO
-
+        for ( Book each : theBooks ){
+            if(each.getId() == id){
+                theBooks.remove(each);
+                break;
+            }
+        }
 
     }
 
@@ -198,18 +221,21 @@ public class Shelf {
      */
     public static void removeBook(String author) {
         // TODO
-
-
+        for ( Book each : theBooks ){
+            if(each.getAuthor().equals(author)){
+                theBooks.remove(each);
+                break;
+            }
+        }
     }
 
     /**
      * Clears the BookShelf of all books
      */
 
-    public static void clearBookShelf() {
+    public static void clearBookShelf(){
         // TODO
-
-
+        theBooks.clear();
     }
 
 } // End of Shelf class

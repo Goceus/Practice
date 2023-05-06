@@ -115,13 +115,18 @@ public class Book {
         } else {
             if (author.contains(" ")) {
                 String[] eachPart = author.split(" ");
-                this.author = capitalize(eachPart[0]) + " " + capitalize(eachPart[1]);
+                String result = "";
+                for(String each : eachPart){
+                    result += capitalize(each) + " ";
+                }
+                this.author = result.trim();
             }else{
                 this.author = capitalize(author);
             }
         }
 
     }
+
 
     /**
      * setTitle method will be used to set value to private title of the Book
@@ -152,16 +157,17 @@ public class Book {
 
             String[] eachWord = title.split(" ");
             String fixedTitle = "";
+
             for (String each : eachWord){
                 if(isTitleWord(each)){
                     fixedTitle += capitalize(each);
                 }else{
-                    fixedTitle += eachWord;
+                    fixedTitle += each;
                 }
                 fixedTitle += " ";
             }
 
-            this.title = fixedTitle;
+            this.title = fixedTitle.substring(0,1).toUpperCase() + fixedTitle.substring(1).trim();
 
         }
 

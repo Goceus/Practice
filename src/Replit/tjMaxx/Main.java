@@ -78,3 +78,21 @@ class ExtraUtil{
     }
 
 }
+/*
+### We want to represent our collection of books in our bookshelf. We will need to build up the `Book` and `Shelf` classes to represent the information of each in java.
+
+### Finish the `Item` class according to all the given comments.	Then work on the `OnSaleItem` class according to all the given comments. Lastly work on the `TJMaxx` class. Each method or part you need to work on has comments to explain what to do in that section. Look for `todo comments` of where you will need to work. Examples of each sections functionality are given in the comments
+
+> Note: Do not change anything in the main method
+
+What you will practice in this practice:
+
+	- inheritance
+	- constructors and calling parent class constructor
+	- overriding
+	- List with custom classes
+
+Main topics: encapsulation, inheritance, class & object, instance variables, constructors, toString, ArrayList, methods
+
+
+ */

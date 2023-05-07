@@ -24,8 +24,8 @@ public class OnSaleItem extends Item {
     public OnSaleItem(String name, int quantity, int catalogNumber, double price, double discount) {
         //TODO
         super(name, quantity, catalogNumber, price);
-        setDiscount(discount);
-        setPrice(getPrice() - getDiscount());
+        this.discount = discount;
+        setPrice(price * ((100 - discount) / 100));
 
     }
 
@@ -60,7 +60,6 @@ public class OnSaleItem extends Item {
     @Override
     public String toString() {
         //TODO
-
-        return "OnSaleItem{discount=" + getDiscount() + "%, name=" + getName() + ", price="+getPrice()+"}";
+        return "OnSaleItem{discount=" + getDiscount() + "%, name=" + getName() + ", price=" + getPrice() + "}";
     }
 }

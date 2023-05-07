@@ -99,7 +99,7 @@ public class Item {
     public String toString() {
         //TODO
 
-        return "Regular Item{name=" + getName() + " , catalogNumber=" + getCatalogNumber() + ", quantity=" + getQuantity() + ", price=" + getPrice() + "}";
+        return "Regular Item{name='" + getName() + "', catalogNumber=" + getCatalogNumber() + ", quantity=" + getQuantity() + ", price=" + getPrice() + "}";
     }
 
 }

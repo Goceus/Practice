@@ -1,6 +1,6 @@
 package CodingBat.warmup1;
 
-public class hasTeen {
+public class HasTeen {
 
     public boolean hasTeen(int a, int b, int c) {
         return (a>=13 && a<=19) ||

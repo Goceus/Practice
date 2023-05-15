@@ -14,7 +14,7 @@ public class DelDel {
     public static void main(String[] args) {
 
         DelDel del = new DelDel();
-        System.out.println(del.delDel());
+
 
 
     }

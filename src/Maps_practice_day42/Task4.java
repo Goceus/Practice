@@ -80,25 +80,18 @@ public class Task4 {
         //4.4 Display the most expensive car
         Integer mostExpensiveCarPrice = Integer.MIN_VALUE;
         Object a = new Object();
-        for(Map.Entry<Integer, Map<String, Object>> eachEntry : myCars.entrySet() ){
-            if( (Integer)eachEntry.getValue().get("price") > mostExpensiveCarPrice ){
-                mostExpensiveCarPrice = (Integer)eachEntry.getValue().get("price");
+        for (Map.Entry<Integer, Map<String, Object>> eachEntry : myCars.entrySet()) {
+            if ((Integer) eachEntry.getValue().get("price") > mostExpensiveCarPrice) {
+                mostExpensiveCarPrice = (Integer) eachEntry.getValue().get("price");
                 a = eachEntry;
             }
         }
         System.out.println("The most expensive car is " + a);
+        System.out.println("------------------------------------------------------------------------------------------");
 
 
-
-        }
     }
-
-
-
-
-
-
-
+}
 /*
 
 4. Given the following maps that contains the different car informations:

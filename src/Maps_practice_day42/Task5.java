@@ -93,7 +93,7 @@ public class Task5 {
             for (Map.Entry<String, Double> eachEntry : eachMap.entrySet()) {
                 if (eachEntry.getValue() > maxHours) {
                     maxHours = eachEntry.getValue();
-                    a = eachEntry;
+                    a = eachEntry.getKey();
                 }
             }
         }
@@ -109,7 +109,7 @@ public class Task5 {
             for (Map.Entry<String, Double> eachEntry : eachmap.entrySet()) {
                 if (eachEntry.getValue() < minHours) {
                     minHours = eachEntry.getValue();
-                    b = eachEntry;
+                    b = eachEntry.getKey();
                 }
             }
         }

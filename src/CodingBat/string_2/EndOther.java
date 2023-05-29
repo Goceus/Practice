@@ -7,8 +7,8 @@ public class EndOther {
 
     public boolean endOther(String a, String b) {
 
-        a.toLowerCase();
-        b.toLowerCase();
+        a = a.toLowerCase();
+        b = b.toLowerCase();
 
         if( a.contains(b) ) {
             if( a.substring( (a.length() - b.length()) ).equalsIgnoreCase(b) ){
@@ -18,7 +18,7 @@ public class EndOther {
 
         if( b.contains(a) ){
 
-            if( b.substring( (b.length() - a.length()) ).equalsIgnoreCase(a) ){
+            if( ( b.substring( (b.length() - a.length()) ) ).equalsIgnoreCase(a) ){
                 return true;
             }
 

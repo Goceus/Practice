@@ -1,5 +1,7 @@
 package java_coding_IQ.array;
 
+import java.util.Arrays;
+
 public class FirstDuplicateElement {
 
     /*
@@ -21,5 +23,25 @@ public class FirstDuplicateElement {
                 -> 3 is the first duplicate found
      */
 
+    public static int firstDupElement(int[] arr) {
+        int count = 1;
 
+        for (int i = 0; i < arr.length - 1; i++) {
+            //System.out.println(arr[i]);
+            for (int j = i + 1; j < arr.length; j++) {
+                //System.out.println(arr[j]);
+                if (arr[i] == arr[j]) {
+                    count++;
+                    return arr[i];
+                }
+            }
+        }
+        return 0;
+    }
+
+    public static void main(String[] args) {
+
+        int[] a = {3, 5, 1, 5, -1, 5, 3};
+        System.out.println(firstDupElement(a));
+    }
 }

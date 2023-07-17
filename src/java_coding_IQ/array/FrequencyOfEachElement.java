@@ -16,9 +16,30 @@ public class FrequencyOfEachElement {
                 Cherry = 1
      */
 
+    public static void frequencyOfEachElement(String[] arr) {
+
+        String str = "";
+
+        for (String each : arr) {
+            int count = 0;
+
+            if (!str.contains(each)) {
+                for (String secondEach : arr) {
+                    if(each.equals(secondEach)) {
+                        count++;
+                    }
+                }
+                str += each + " = " + count + "\n";
+            }
+        }
+        System.out.println(str);
+
+    }
 
     public static void main(String[] args) {
 
+        String[] x = {"Apple", "Banana", "Apple", "Apple", "Banana", "Cherry"};
+        frequencyOfEachElement(x);
 
 
     }

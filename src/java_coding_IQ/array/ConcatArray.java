@@ -13,4 +13,15 @@ public class ConcatArray {
             Output:
                 [1, 4, 5, 8, 12, 5, 9]
      */
+
+public static int[] concatArrays(){
+
+
+}
+
+    public static void main(String[] args) {
+
+
+
+    }
 }

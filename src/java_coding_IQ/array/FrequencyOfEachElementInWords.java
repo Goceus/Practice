@@ -1,5 +1,8 @@
 package java_coding_IQ.array;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 public class FrequencyOfEachElementInWords {
 
      /*
@@ -19,12 +22,35 @@ public class FrequencyOfEachElementInWords {
                 4 is two
      */
 
+    public static void frequencyElement(Integer[] arr) {
 
+
+    }
 
 
     public static void main(String[] args) {
 
+        int[] arr = {1, 2, 3, 4, 3, 2, 1, 3, 2, 2, 2, 4};
+//      frequencyElement(x);
 
+        Map<Integer, Integer> map = new LinkedHashMap<>();
+
+        for (int each : arr){
+            if(map.containsKey(each)){// second, it checks if map already contains the array element. If it does...
+                map.put(each, map.get(each) +1); // ...it increments the value by 1.
+            }else{
+                map.put(each, 1);// first, it will assign the first element in the array as key, and puts number 1 as value.
+            }
+        }
+
+
+        String[] words = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "more than ten"};
+
+        for (int key : map.keySet()){
+            System.out.println(key + " is " + words[map.get(key) - 1]);// always subtract 1 to convert the frequency to the index of the words array
+        }
 
     }
+
+
 }

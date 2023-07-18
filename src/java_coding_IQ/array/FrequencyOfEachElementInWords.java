@@ -22,16 +22,10 @@ public class FrequencyOfEachElementInWords {
                 4 is two
      */
 
-    public static void frequencyElement(Integer[] arr) {
-
-
-    }
-
 
     public static void main(String[] args) {
 
         int[] arr = {1, 2, 3, 4, 3, 2, 1, 3, 2, 2, 2, 4};
-//      frequencyElement(x);
 
         Map<Integer, Integer> map = new LinkedHashMap<>();
 

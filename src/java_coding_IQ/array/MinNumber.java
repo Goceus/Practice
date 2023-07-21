@@ -19,4 +19,22 @@ public class MinNumber {
      */
 
 
+    public static int minNumber(int[] arr){
+        int min = Integer.MAX_VALUE;
+        for (int i = 0; i < arr.length; i++) {
+            if(arr[i] < min){
+                min = arr[i];
+            }
+        }
+        return min;
+    }
+
+    public static void main(String[] args) {
+
+        int[] x = {3, 5, 1, 5, -1, -5};
+        System.out.println("The smallest number in the array is: " + minNumber(x));
+
+    }
+
+
 }

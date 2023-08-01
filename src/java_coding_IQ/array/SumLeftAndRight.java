@@ -1,5 +1,7 @@
 package java_coding_IQ.array;
 
+import java.util.Arrays;
+
 public class SumLeftAndRight {
 
     /*
@@ -29,11 +31,32 @@ public class SumLeftAndRight {
 
      */
 
+    public static int sumLeftAndRight(int[] arr) {
 
+        for (int i = 1; i < arr.length - 1; i++) { // go through all elements
 
+            int left = 0;
+            int right = 0;
+
+            for (int j = 0; j < arr.length; j++) { // add the left and right parts
+                if (j < i) {
+                    left += arr[j];
+                } else if (j > i) {
+                    right += arr[j];
+                }
+            }
+            if (left == right) {
+                return arr[i];
+            }
+        }
+        return 0;
+    }
 
     public static void main(String[] args) {
 
+        int[] x = {1, 2, 3, 4, 100, 10};
+        System.out.println("Original array elements: " + Arrays.toString(x));
+        System.out.println(sumLeftAndRight(x));
 
     }
 }

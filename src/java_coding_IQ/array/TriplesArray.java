@@ -15,9 +15,17 @@ public class TriplesArray {
      */
 
 
+    public static boolean noTriples(int[] arr) {
+
+        for (int i = 0; i < arr.length-2; i++) {// length is -2 because...
+            if(arr[i] == arr[i+1] && arr[i] == arr[i+2]) return false;//...we assign +2 in the index of the array in the loop.
+        }
+        return true;
+    }
+
+
     public static void main(String[] args) {
-
-
-
+        int[] x = {1, 1, 2, 2, 1, 2};
+        System.out.println("noTriples(x) = " + noTriples(x));
     }
 }
